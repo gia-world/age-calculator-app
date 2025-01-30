@@ -22,7 +22,7 @@ main {
   padding-right: 6rem;
   @include mobile {
     padding-right: 0;
-    padding-bottom: 2.5rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -100,6 +100,7 @@ input {
     width: 5rem;
     height: 5rem;
     right: 50%;
+    bottom: 1.2rem;
     transform: translateX(50%);
   }
 }
