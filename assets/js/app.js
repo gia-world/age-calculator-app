@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const errorMessageElement = input.nextElementSibling;
       errorMessageElement.textContent = "";
       inputObj[input.id] = input;
+
+      const label = document.querySelector(`label[for="${input.id}"]`);
+      if (label) label.classList.remove("error");
     });
 
     const day = parseInt(inputObj["input-day"].value);
@@ -57,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const inputElement = inputObj[`input-${key}`];
       const errorMessageElement = inputElement.nextElementSibling;
       errorMessageElement.textContent = errorObj[key];
+
+      const label = document.querySelector(`label[for="input-${key}"]`);
+      if (label) label.classList.add("error");
     });
 
     if (Object.keys(errorObj).length > 0) return;
