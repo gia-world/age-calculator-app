@@ -1,8 +1,87 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
+@import "variables";
+@import "global";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+main {
+  background: $white;
+  border-radius: 20px 20px 80px 20px;
+  padding: 32px;
+}
+.calculator-form {
+  position: relative;
+  padding-bottom: 30px;
+  padding-right: 60px;
+}
+
+.calculator {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 40px;
+  padding-right: 120px;
+  border-bottom: 1px solid $light-grey;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  &.error {
+    color: $light-red;
+    input {
+      border-color: $light-red;
+    }
+  }
+}
+
+input {
+  width: 140px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  font-size: $font-size-inputs;
+  font-weight: 700;
+  color: $smokey-grey;
+  &:focus {
+    border-color: $purple;
+  }
+}
+.error-msg {
+  letter-spacing: normal;
+  font-weight: 400;
+  color: $light-red;
+}
+
+.submit-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  padding: 14px;
+  border-radius: 100%;
+  background-color: $purple;
+  img {
+    fill: $purple;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.result {
+  font-size: 54px;
+  font-weight: 800;
+  font-style: italic;
+  color: $off-black;
+  span {
+    color: $purple;
+  }
 }
