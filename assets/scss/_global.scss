@@ -4,13 +4,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  font-size: 62.5%;
+  line-height: 1.285;
+  @media (max-width: 800px) {
+    font-size: 45%;
+  }
+  @media (max-width: 500px) {
+    font-size: 62.5%;
+  }
+}
 
 body {
-  font-family: $font-family, sans-serif;
+  font-family: "Poppins", sans-serif;
   color: $smokey-grey;
   background-color: $off-white;
-  font-size: 14px;
-  line-height: 1.5;
 }
 fieldset {
   border: 0;
